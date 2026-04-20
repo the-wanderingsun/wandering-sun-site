@@ -4,7 +4,7 @@ import Link from "next/link";
 
 export const revalidate = 3600;
 
-interface Tweet { username: string; name: string; text: string; url: string; likes: number; retweets: number; replies: number; views: number; time: number; }
+interface Tweet { username: string; name: string; text: string; text_zh?: string; url: string; likes: number; retweets: number; replies: number; views: number; time: number; }
 interface MarketItem { symbol: string; price: number; change_24h: number; }
 interface NewsItem { title: string; link: string; source: string; pubDate: string; }
 interface DigestData { date: string; ai_tweets: Tweet[]; market: MarketItem[]; news: NewsItem[]; }
@@ -77,7 +77,8 @@ export default function DailyPage() {
                       <span className="text-sm font-medium text-stone-700">@{t.username}</span>
                       <span className="text-xs text-stone-400">{timeAgo(t.time)}</span>
                     </div>
-                    <p className="text-sm text-stone-600 line-clamp-3 leading-relaxed">{t.text}</p>
+                    <p className="text-sm text-stone-600 line-clamp-3 leading-relaxed">{t.text_zh || t.text}</p>
+                    {t.text_zh && <p className="text-xs text-stone-400 line-clamp-2 mt-1 leading-relaxed">{t.text}</p>}
                     <div className="flex gap-4 mt-3 text-xs text-stone-400">
                       <span>👍 {t.likes?.toLocaleString()}</span>
                       <span>🔁 {t.retweets?.toLocaleString()}</span>

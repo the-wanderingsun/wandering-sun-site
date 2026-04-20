@@ -38,6 +38,7 @@ jobs:
         env:
           SURF_API_KEY: ${{ secrets.SURF_API_KEY }}
           SURF_BIN: $HOME/.local/bin/surf
+          ANTHROPIC_API_KEY: ${{ secrets.ANTHROPIC_API_KEY }}
 
       - name: Commit and push data
         run: |

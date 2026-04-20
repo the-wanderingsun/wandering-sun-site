@@ -28,6 +28,7 @@ const RSS_SOURCES = [
 ];
 
 const SURF_BIN = process.env.SURF_BIN || `${process.env.HOME}/.local/bin/surf`;
+const ANTHROPIC_API_KEY = process.env.ANTHROPIC_API_KEY;
 
 // ── 工具函数 ──────────────────────────────────────────
 
@@ -66,23 +67,65 @@ async function fetchRSS(source) {
   }
 }
 
-// ── 抓取市场行情 ──────────────────────────────────────
-function fetchMarket() {
-  const results = [];
-  for (const symbol of COINS) {
-    const data = runSurf(`market-price --symbol ${symbol}`);
-    if (data) {
-      const item = Array.isArray(data) ? data[0] : data;
-      if (item) {
-        results.push({
-          symbol,
-          price: item.price ?? item.current_price ?? 0,
-          change_24h: item.price_change_percentage_24h ?? item.change_24h ?? 0,
-        });
-      }
-    }
+// ── 抓取市场行情（CryptoCompare，无需 key）────────────
+async function fetchMarket() {
+  const https = require("https");
+  return new Promise((resolve) => {
+    const url = "https://min-api.cryptocompare.com/data/pricemultifull?fsyms=BTC,ETH,SOL,BNB&tsyms=USD";
+    const req = https.get(url, { timeout: 15000 }, (res) => {
+      let raw = "";
+      res.on("data", (c) => raw += c);
+      res.on("end", () => {
+        try {
+          const json = JSON.parse(raw);
+          const raw2 = json?.RAW;
+          if (!raw2) { console.warn("Market API unexpected:", JSON.stringify(json).slice(0, 100)); return resolve([]); }
+          const result = ["BTC", "ETH", "SOL", "BNB"].map((symbol) => {
+            const d = raw2[symbol]?.USD;
+            if (!d) return null;
+            return { symbol, price: d.PRICE, change_24h: d.CHANGEPCT24HOUR };
+          }).filter(Boolean);
+          resolve(result);
+        } catch (e) { console.warn("Market parse failed:", e.message); resolve([]); }
+      });
+    });
+    req.on("error", (e) => { console.warn("Market fetch failed:", e.message); resolve([]); });
+    req.on("timeout", () => { req.destroy(); console.warn("Market fetch timeout"); resolve([]); });
+  });
+}
+
+// ── 翻译推文（Claude API）────────────────────────────
+async function translateTweets(tweets) {
+  if (!ANTHROPIC_API_KEY || tweets.length === 0) return tweets;
+  try {
+    const Anthropic = require("@anthropic-ai/sdk");
+    const client = new Anthropic.default({ apiKey: ANTHROPIC_API_KEY });
+
+    const input = tweets.map((t, i) => `[${i}] @${t.username}: ${t.text}`).join("\n\n");
+
+    const msg = await client.messages.create({
+      model: "claude-haiku-4-5",
+      max_tokens: 4096,
+      messages: [{
+        role: "user",
+        content: `将以下推文翻译并压缩总结为中文，每条控制在80字以内，保留关键信息和技术术语。输出格式严格为JSON数组，每个元素只有一个字段 "zh"，顺序与输入一致。
+
+${input}
+
+输出示例：[{"zh":"翻译内容"},{"zh":"翻译内容"}]
+只输出JSON，不要其他文字。`
+      }]
+    });
+
+    const json = JSON.parse(msg.content[0].text.trim());
+    return tweets.map((t, i) => ({
+      ...t,
+      text_zh: json[i]?.zh ?? "",
+    }));
+  } catch (e) {
+    console.warn("Translation failed:", e.message.slice(0, 100));
+    return tweets;
   }
-  return results;
 }
 
 // ── 抓取推文 ──────────────────────────────────────────
@@ -118,11 +161,12 @@ async function main() {
   console.log("Fetching digest data...");
 
   const [market, newsArrays] = await Promise.all([
-    Promise.resolve(fetchMarket()),
+    fetchMarket(),
     Promise.all(RSS_SOURCES.map(fetchRSS)),
   ]);
 
-  const tweets = fetchTweets();
+  const tweetsRaw = fetchTweets();
+  const tweets = await translateTweets(tweetsRaw);
   const news = newsArrays.flat().sort((a, b) => {
     const ta = a.pubDate ? new Date(a.pubDate).getTime() : 0;
     const tb = b.pubDate ? new Date(b.pubDate).getTime() : 0;

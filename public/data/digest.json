@@ -1,197 +1,37 @@
 {
   "date": "2026年4月20日",
   "dateKey": "2026-04-20",
-  "updated_at": "2026-04-20T10:20:35.486Z",
+  "updated_at": "2026-04-20T10:45:11.826Z",
   "market": [
     {
       "symbol": "BTC",
-      "price": 0,
-      "change_24h": 0
+      "price": 75214.329862015,
+      "change_24h": -0.04900958109469722
     },
     {
       "symbol": "ETH",
-      "price": 0,
-      "change_24h": 0
+      "price": 2310.30968491742,
+      "change_24h": -0.36898925069129146
     },
     {
       "symbol": "SOL",
-      "price": 0,
-      "change_24h": 0
+      "price": 85.0328620692307,
+      "change_24h": 0.2532277668328915
     },
     {
       "symbol": "BNB",
-      "price": 0,
-      "change_24h": 0
+      "price": 627.0460755068035,
+      "change_24h": 1.0662787028501541
     }
   ],
-  "ai_tweets": [
-    {
-      "username": "emollick",
-      "name": "Ethan Mollick",
-      "text": "The continuing gap between the capabilities of Gemini Pro 3.1 (very good model) and the capabilities of the Gemini app/website is odd. The model can do what Claude/GPT can do, but there is a minimal harness for tools (file creation, research etc), no auditable CoT/actions, manual canvas, etc.\n\nThe reason this is odd is that Google is trusted by enterprises & has the compute to burn, so a good harness would solve so many of Gemini’s gaps and make it an easier sell to companies. The model can make Office documents, for example, but the harness doesn’t allow it. It could also decide when to use other Google tools (and Google has a lot of very good AI tools) and apply them, taking advantage of the ecosystem, but it doesn’t consistently.\n\nI assume something will be coming out here eventually, but the gap with Claude and ChatGPT has only been growing.",
-      "url": "https://x.com/emollick/status/2045909435315323321",
-      "time": 1776617795,
-      "likes": 1151,
-      "retweets": 66,
-      "replies": 95,
-      "views": 77278
-    },
-    {
-      "username": "karpathy",
-      "name": "Andrej Karpathy",
-      "text": "@bryan_johnson Yeah I've seen it a few times now, all the Enneagram type fives get one shotted into AI psychosis when they discover LLM knowledge bases :) And an especially a strong fit when you have a lot of pre-existing data to insert into it.",
-      "url": "https://x.com/karpathy/status/2046017433199374610",
-      "time": 1776643543,
-      "likes": 832,
-      "retweets": 21,
-      "replies": 34,
-      "views": 58649
-    },
-    {
-      "username": "emollick",
-      "name": "Ethan Mollick",
-      "text": "The second most important release of the LLM era (after GPT-3.5), featuring what was likely the most important chart.\n\nStill seems surprising to me that OpenAI told everyone about the biggest advance in AI technology since the LLM rather than keeping it to themselves until later. https://t.co/3zKGQsQ5jY",
-      "url": "https://x.com/emollick/status/2046053467941163055",
-      "time": 1776652135,
-      "likes": 689,
-      "retweets": 19,
-      "replies": 50,
-      "views": 112746
-    },
-    {
-      "username": "emollick",
-      "name": "Ethan Mollick",
-      "text": "An obvious way to release Mythos class models with uncertain autonomous ability is to make them only available on the website, like Gemini Deep Think or ChatGPT Pro.\n\nMinimal risk of being used for autonomous hacking, but accessible to people who have hard problems to solve.",
-      "url": "https://x.com/emollick/status/2045916298450784680",
-      "time": 1776619431,
-      "likes": 512,
-      "retweets": 10,
-      "replies": 40,
-      "views": 31266
-    },
-    {
-      "username": "ylecun",
-      "name": "Yann LeCun",
-      "text": "\"one economist Nobel laureate was wrong once about one thing, therefore all economists are wrong\" is not good logic. \n\nThe whole history of technological progress is one in which people became more productive and some professions were progressively displaced or eliminated. \nYet this has never caused long-term mass unemployment. \nAI is just another one of those technological revolutions.\nPeople like Dario present it as qualitatively different from previous revolutions.\nIt's not.",
-      "url": "https://x.com/ylecun/status/2045875079238558179",
-      "time": 1776609604,
-      "likes": 317,
-      "retweets": 10,
-      "replies": 27,
-      "views": 19005
-    },
-    {
-      "username": "emollick",
-      "name": "Ethan Mollick",
-      "text": "I am not convinced that we should be comfortable calling \"problem solving\" or \"judgement\" or whatever as skills that are impossible for AI to do well. Like any other skill, there are humans who are really good at it, but that doesn't mean that AIs don't do good judgement, etc.",
-      "url": "https://x.com/emollick/status/2045943414219276674",
-      "time": 1776625896,
-      "likes": 266,
-      "retweets": 31,
-      "replies": 41,
-      "views": 45813
-    },
-    {
-      "username": "steipete",
-      "name": "Peter Steinberger 🦞",
-      "text": "@garrytan You’re shipping harder than I do these days!",
-      "url": "https://x.com/steipete/status/2045974191866786153",
-      "time": 1776633234,
-      "likes": 295,
-      "retweets": 3,
-      "replies": 11,
-      "views": 88610
-    },
-    {
-      "username": "ylecun",
-      "name": "Yann LeCun",
-      "text": "@DrTonyCarden @Ph_Aghion @erikbryn No! \nIt really doesn't differ qualitatively from previous technological revolutions. \nThat's the whole point.\n\nPeople like Dario present it as qualitatively different.\nThey are just deluded or biased by their vested interests in magnifying the impact of their work.",
-      "url": "https://x.com/ylecun/status/2045879469185843481",
-      "time": 1776610650,
-      "likes": 244,
-      "retweets": 8,
-      "replies": 17,
-      "views": 29042
-    },
-    {
-      "username": "zarazhangrui",
-      "name": "Zara Zhang",
-      "text": "As AI gets more capable, product teams should spend more time on external communication (talking to users, customers, etc) than internal communication\n\n1. Figuring out “what” to build will be a lot more important than building it. Getting this right requires sparks of inspiration that strike when you talk to external people, esp those who are every different from you. Since AI is very good at implementing solutions, humans should focus on understanding the PROBLEM\n\n2. Teams will be a lot smaller, so internal communication overhead will decrease dramatically. Teams that work extensively with agents are already seeing a huge decrease in the number of internal meetings & coordination work \n\n3. I’m seeing a more dramatic version of this with some of my indie entrepreneur friends: they spend all day talking to customers, and then just dump the recordings at their agents who will figure out what to do and handle the execution",
-      "url": "https://x.com/zarazhangrui/status/2045810170245386713",
-      "time": 1776594128,
-      "likes": 156,
-      "retweets": 12,
-      "replies": 29,
-      "views": 9515
-    },
-    {
-      "username": "emollick",
-      "name": "Ethan Mollick",
-      "text": "And there are many really good AI components at Google: they have top-flight image, music, &amp; video generation, and good UIs for each of them.\n\nGoogle AI studio is probably the best playground for AI experimentation. NotebookLM still has no equivalent product from other labs, etc.",
-      "url": "https://x.com/emollick/status/2045942205135601713",
-      "time": 1776625608,
-      "likes": 106,
-      "retweets": 4,
-      "replies": 9,
-      "views": 10614
-    },
-    {
-      "username": "emollick",
-      "name": "Ethan Mollick",
-      "text": "The imaginary optimal selfish scenario for OpenAI, in retrospect, was to keep Reasoners a secret, skip releasing o1 and o1-preview, and release o3 as GPT-5\n\nThere would have been no Deep Seek moment, other labs may not have discovered Reasoners. But they weren't selfish about it!",
-      "url": "https://x.com/emollick/status/2046054655268999557",
-      "time": 1776652418,
-      "likes": 100,
-      "retweets": 4,
-      "replies": 8,
-      "views": 8458
-    },
-    {
-      "username": "ylecun",
-      "name": "Yann LeCun",
-      "text": "@CryptoVonDoom @Ph_Aghion @erikbryn There are many causes for that. \nAI is a good scapegoat. \nBut uncertainties about international trade is likely a much bigger one.\nTechnological progress does cause temporary shifts in some jobs, but it never causes long-term mass unemployment.",
-      "url": "https://x.com/ylecun/status/2045876050798764181",
-      "time": 1776609835,
-      "likes": 94,
-      "retweets": 2,
-      "replies": 4,
-      "views": 7538
-    },
-    {
-      "username": "ylecun",
-      "name": "Yann LeCun",
-      "text": "@AlexShtf Indeed it is.",
-      "url": "https://x.com/ylecun/status/2045917763093266622",
-      "time": 1776619780,
-      "likes": 63,
-      "retweets": 1,
-      "replies": 3,
-      "views": 9428
-    },
-    {
-      "username": "ylecun",
-      "name": "Yann LeCun",
-      "text": "@tennisgrok @Ph_Aghion @erikbryn That's like saying \"don't pay attention to physicists. The best physicists are Formula 1 pilots\" \n\nYou win the Prize for the Stupidest Analogy of the Day.",
-      "url": "https://x.com/ylecun/status/2045877751777726741",
-      "time": 1776610241,
-      "likes": 50,
-      "retweets": 0,
-      "replies": 3,
-      "views": 4668
-    },
-    {
-      "username": "ylecun",
-      "name": "Yann LeCun",
-      "text": "@gsvm42 @Ph_Aghion @erikbryn A tech CEO knows as much about labor economics as the head of a Formula 1 racing team knows about thermodynamics.",
-      "url": "https://x.com/ylecun/status/2045881096663978218",
-      "time": 1776611038,
-      "likes": 41,
-      "retweets": 1,
-      "replies": 3,
-      "views": 4735
-    }
-  ],
+  "ai_tweets": [],
   "news": [
+    {
+      "title": "Coinbase Tests AI Agents Modeled on ‘Legendary’ Former Execs",
+      "link": "https://decrypt.co/364866/coinbase-tests-ai-agents-modeled-on-legendary-former-execs",
+      "source": "Decrypt",
+      "pubDate": "2026-04-20T10:31:03.000Z"
+    },
     {
       "title": "具透｜Android 17 正式版前瞻",
       "link": "https://sspai.com/post/108899",
@@ -239,12 +79,6 @@
       "link": "https://decrypt.co/364817/galaxyone-head-wants-retail-investors-stake-more-predict-less",
       "source": "Decrypt",
       "pubDate": "2026-04-18T19:44:48.000Z"
-    },
-    {
-      "title": "What Is Q-Day? The Quantum Threat to Bitcoin Explained",
-      "link": "https://decrypt.co/resources/what-q-day-quantum-threat-bitcoin-explained",
-      "source": "Decrypt",
-      "pubDate": "2026-04-18T15:53:16.000Z"
     }
   ]
 }
