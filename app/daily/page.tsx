@@ -7,7 +7,7 @@ export const revalidate = 3600;
 interface Tweet { username: string; name: string; text: string; text_zh?: string; url: string; likes: number; retweets: number; replies: number; views: number; time: number; }
 interface MarketItem { symbol: string; price: number; change_24h: number; }
 interface NewsItem { title: string; link: string; source: string; pubDate: string; }
-interface DigestData { date: string; ai_tweets: Tweet[]; market: MarketItem[]; news: NewsItem[]; }
+interface DigestData { date: string; ai_tweets: Tweet[]; market: MarketItem[]; news: NewsItem[]; ai_digest?: string; ai_digest_date?: string; }
 
 function timeAgo(ts: number) {
   const diff = Math.floor((Date.now() / 1000 - ts) / 3600);
@@ -65,8 +65,28 @@ export default function DailyPage() {
             </section>
           )}
 
-          {/* AI Tweets */}
-          {data.ai_tweets?.length > 0 && (
+          {/* AI Digest (follow-builders 生成) */}
+          {data.ai_digest ? (
+            <section>
+              <h2 className="text-base font-semibold text-stone-600 mb-3">🤖 AI 圈日报</h2>
+              <div className="rounded-2xl bg-white border border-orange-100 p-6 prose prose-stone prose-sm max-w-none
+                prose-headings:text-stone-700 prose-headings:font-semibold
+                prose-a:text-orange-500 prose-a:no-underline hover:prose-a:underline
+                prose-hr:border-orange-100 prose-strong:text-stone-700">
+                {data.ai_digest.split("\n").map((line, i) => {
+                  if (line.startsWith("# ")) return <h1 key={i} className="text-lg font-bold text-stone-800 mb-2">{line.slice(2)}</h1>;
+                  if (line.startsWith("## ")) return <h2 key={i} className="text-base font-semibold text-stone-600 mt-6 mb-2">{line.slice(3)}</h2>;
+                  if (line.startsWith("**") && line.endsWith("**")) return <p key={i} className="font-semibold text-stone-700 mt-4 mb-1">{line.slice(2, -2)}</p>;
+                  if (line.startsWith("- ")) return <p key={i} className="text-sm text-stone-600 pl-3 border-l-2 border-orange-100 my-1">{line.slice(2)}</p>;
+                  if (line.startsWith("*") && line.endsWith("*") && !line.startsWith("**")) return <p key={i} className="text-xs text-stone-400 italic my-1">{line.slice(1, -1)}</p>;
+                  if (line.startsWith("https://") || line.startsWith("http://")) return <a key={i} href={line} target="_blank" rel="noopener noreferrer" className="block text-xs text-orange-400 hover:underline truncate my-1">{line}</a>;
+                  if (line === "---") return <hr key={i} className="border-orange-100 my-4" />;
+                  if (line.trim() === "") return <div key={i} className="h-1" />;
+                  return <p key={i} className="text-sm text-stone-600 leading-relaxed">{line}</p>;
+                })}
+              </div>
+            </section>
+          ) : data.ai_tweets?.length > 0 && (
             <section>
               <h2 className="text-base font-semibold text-stone-600 mb-3">🤖 AI 圈精选</h2>
               <div className="space-y-3">
