@@ -1,0 +1,48 @@
+name: Daily Data Fetch
+
+on:
+  schedule:
+    - cron: '0 3 * * *'   # 每天 11:00 北京时间（UTC+8 = UTC 03:00）
+  workflow_dispatch:        # 允许手动触发，方便测试
+
+jobs:
+  fetch:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout repo
+        uses: actions/checkout@v4
+
+      - name: Setup Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: '20'
+          cache: 'npm'
+
+      - name: Install dependencies
+        run: npm ci
+
+      - name: Install surf CLI
+        run: |
+          curl -LsSf https://agents.asksurf.ai/install.sh | sh || true
+          echo "$HOME/.local/bin" >> $GITHUB_PATH
+
+      - name: Fetch GitHub data
+        run: node scripts/fetch-github.js
+        env:
+          GITHUB_USERNAME: the-wanderingsun
+          GITHUB_TOKEN: ${{ secrets.GH_TOKEN }}
+
+      - name: Fetch digest data
+        run: node scripts/fetch-digest.js
+        env:
+          SURF_API_KEY: ${{ secrets.SURF_API_KEY }}
+          SURF_BIN: $HOME/.local/bin/surf
+
+      - name: Commit and push data
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "github-actions[bot]@users.noreply.github.com"
+          git add public/data
+          git diff --cached --quiet || git commit -m "chore: daily data update $(TZ='Asia/Shanghai' date +%Y-%m-%d)"
+          git push
