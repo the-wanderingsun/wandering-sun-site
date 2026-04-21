@@ -6,6 +6,7 @@ const links = [
   { href: "/", label: "首页", icon: "☀️" },
   { href: "/blog", label: "博客", icon: "✍️" },
   { href: "/daily", label: "每日日报", icon: "📰" },
+  { href: "/links", label: "我的推荐", icon: "🔖" },
   { href: "/github", label: "GitHub", icon: "🛠️" },
   { href: "/podcast", label: "播客", icon: "🎙️" },
 ];
