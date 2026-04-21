@@ -15,10 +15,13 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
     <html lang="zh" className={`${geist.variable} antialiased`}>
       <body className="min-h-screen bg-[#fdf8f3]">
         <Nav />
-        <main className="max-w-3xl mx-auto px-4 py-10">{children}</main>
-        <footer className="max-w-3xl mx-auto px-4 py-8 text-center text-sm text-stone-400">
-          © {new Date().getFullYear()} 太阳在世界游荡
-        </footer>
+        {/* 桌面端：内容区向右偏移侧边栏宽度 */}
+        <div className="md:pl-52">
+          <main className="max-w-2xl mx-auto px-6 py-10">{children}</main>
+          <footer className="max-w-2xl mx-auto px-6 py-8 text-center text-sm text-stone-400">
+            © {new Date().getFullYear()} 太阳在世界游荡
+          </footer>
+        </div>
       </body>
     </html>
   );
