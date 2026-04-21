@@ -10,14 +10,6 @@ const socials = [
   { label: "GitHub", href: "https://github.com/the-wanderingsun", emoji: "🐙" },
 ];
 
-const sections = [
-  { href: "/daily", emoji: "📰", title: "每日日报", desc: "AI 圈动态 · 市场行情 · 精选资讯，每天自动更新" },
-  { href: "/blog", emoji: "✍️", title: "博客", desc: "记录思考、观察与随笔" },
-  { href: "/github", emoji: "🔨", title: "我在做什么", desc: "GitHub 贡献记录与近期项目" },
-  { href: "/links", emoji: "🔖", title: "我的推荐", desc: "值得分享的网站、工具与内容" },
-  { href: "/podcast", emoji: "🎙️", title: "播客", desc: "Coming Soon" },
-];
-
 const typewriterLines = [
   "💁‍♀️ 土木转行 Web3",
   "▶️ Web3 运营 · 分享可复制的转型经验",
@@ -42,82 +34,138 @@ export default function Home() {
   const quotes = getQuotes();
 
   return (
-    <div className="space-y-10">
-      {/* Hero */}
-      <section className="pt-6 space-y-4">
-        <div className="text-5xl">☀️</div>
-        <h1 className="text-3xl font-bold text-stone-800 tracking-tight">太阳在世界游荡</h1>
-        <p className="text-stone-400 text-sm">原名：梅子林</p>
+    <div className="py-4 space-y-3">
 
-        {/* 打字机效果 */}
-        <Typewriter texts={typewriterLines} />
+      {/* ── Bento Grid ── */}
+      <div className="grid grid-cols-1 md:grid-cols-5 gap-3 auto-rows-auto">
 
-        {/* Social links */}
-        <div className="flex flex-wrap gap-3 pt-2">
-          {socials.map((s) => (
-            <a
-              key={s.href}
-              href={s.href}
-              target="_blank"
-              rel="noopener noreferrer"
-              className="inline-flex items-center gap-1.5 px-4 py-2 rounded-full bg-white border border-orange-100 text-sm text-stone-600 hover:border-orange-300 hover:text-orange-600 transition-all hover:-translate-y-0.5 hover:shadow-sm shadow-sm"
-            >
-              <span>{s.emoji}</span>
-              <span>{s.label}</span>
-            </a>
-          ))}
+        {/* Hero 大卡 — 占左侧 3 列，桌面端跨 2 行 */}
+        <div className="md:col-span-3 md:row-span-2 rounded-3xl bg-white border border-orange-100 p-7 flex flex-col justify-between min-h-64">
+          <div className="space-y-4">
+            <div className="text-4xl">☀️</div>
+            <div>
+              <h1 className="text-2xl font-bold text-stone-800 tracking-tight">太阳在世界游荡</h1>
+              <p className="text-xs text-stone-400 mt-1">原名：梅子林</p>
+            </div>
+            <Typewriter texts={typewriterLines} />
+          </div>
+          {/* Social links */}
+          <div className="flex flex-wrap gap-2 pt-6">
+            {socials.map((s) => (
+              <a
+                key={s.href}
+                href={s.href}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="inline-flex items-center gap-1.5 px-3 py-1.5 rounded-full bg-orange-50 border border-orange-100 text-xs text-stone-600 hover:border-orange-300 hover:text-orange-600 transition-all hover:-translate-y-0.5"
+              >
+                <span>{s.emoji}</span>
+                <span>{s.label}</span>
+              </a>
+            ))}
+          </div>
         </div>
-      </section>
 
-      {/* Now 模块 */}
-      {now && (
-        <section className="rounded-2xl bg-white border border-orange-100 p-5 space-y-3">
-          <p className="text-xs font-semibold text-orange-400 uppercase tracking-wider">现在</p>
-          <div className="space-y-2">
-            <div className="flex items-center gap-3 text-sm text-stone-600">
-              <span className="text-base">🎵</span>
-              <span className="text-stone-400 w-8 shrink-0">在听</span>
-              <span className="font-medium text-stone-700">{now.listening}</span>
-            </div>
-            <div className="flex items-center gap-3 text-sm text-stone-600">
-              <span className="text-base">📖</span>
-              <span className="text-stone-400 w-8 shrink-0">在读</span>
-              <span className="font-medium text-stone-700">{now.reading}</span>
-            </div>
-            <div className="flex items-center gap-3 text-sm text-stone-600">
-              <span className="text-base">📍</span>
-              <span className="text-stone-400 w-8 shrink-0">在</span>
-              <span className="font-medium text-stone-700">{now.location}</span>
+        {/* Now 卡 — 右侧上半 */}
+        {now && (
+          <div className="md:col-span-2 rounded-3xl bg-white border border-orange-100 p-5 space-y-3">
+            <p className="text-xs font-semibold text-orange-400 uppercase tracking-widest">现在</p>
+            <div className="space-y-2.5">
+              <div className="flex items-start gap-2.5 text-sm">
+                <span>🎵</span>
+                <div>
+                  <p className="text-xs text-stone-400">在听</p>
+                  <p className="text-stone-700 text-xs font-medium leading-snug mt-0.5">{now.listening}</p>
+                </div>
+              </div>
+              <div className="flex items-start gap-2.5 text-sm">
+                <span>📖</span>
+                <div>
+                  <p className="text-xs text-stone-400">在读</p>
+                  <p className="text-stone-700 text-xs font-medium leading-snug mt-0.5">{now.reading}</p>
+                </div>
+              </div>
+              <div className="flex items-start gap-2.5 text-sm">
+                <span>📍</span>
+                <div>
+                  <p className="text-xs text-stone-400">在</p>
+                  <p className="text-stone-700 text-xs font-medium mt-0.5">{now.location}</p>
+                </div>
+              </div>
             </div>
           </div>
-        </section>
-      )}
+        )}
 
-      {/* Divider */}
-      <div className="border-t border-orange-100" />
+        {/* 每日日报卡 — 右侧下半 */}
+        <Link
+          href="/daily"
+          className="md:col-span-2 group rounded-3xl bg-gradient-to-br from-orange-50 to-amber-50 border border-orange-100 p-5 flex flex-col justify-between hover:border-orange-300 hover:shadow-md hover:-translate-y-0.5 transition-all duration-200 min-h-32"
+        >
+          <div>
+            <span className="text-2xl">📰</span>
+            <h2 className="font-semibold text-stone-800 mt-2 group-hover:text-orange-600 transition-colors">每日日报</h2>
+            <p className="text-xs text-stone-400 mt-1 leading-relaxed">AI 圈动态 · 市场行情 · 精选资讯</p>
+          </div>
+          <span className="text-orange-300 group-hover:text-orange-500 group-hover:translate-x-0.5 transition-all text-sm self-end">→</span>
+        </Link>
 
-      {/* Navigation cards */}
-      <section className="grid gap-3">
-        {sections.map((s) => (
-          <Link
-            key={s.href}
-            href={s.href}
-            className="group flex items-center gap-4 p-5 rounded-2xl bg-white border border-orange-100 hover:border-orange-300 hover:shadow-md hover:-translate-y-0.5 transition-all duration-200"
-          >
-            <span className="text-2xl">{s.emoji}</span>
-            <div className="flex-1">
-              <div className="font-semibold text-stone-800 group-hover:text-orange-600 transition-colors text-sm">
-                {s.title}
-              </div>
-              <div className="text-xs text-stone-400 mt-0.5">{s.desc}</div>
-            </div>
-            <span className="text-stone-300 group-hover:text-orange-400 group-hover:translate-x-0.5 transition-all">→</span>
-          </Link>
-        ))}
-      </section>
+        {/* 博客卡 */}
+        <Link
+          href="/blog"
+          className="md:col-span-2 group rounded-3xl bg-white border border-orange-100 p-5 flex flex-col justify-between hover:border-orange-300 hover:shadow-md hover:-translate-y-0.5 transition-all duration-200 min-h-32"
+        >
+          <div>
+            <span className="text-2xl">✍️</span>
+            <h2 className="font-semibold text-stone-800 mt-2 group-hover:text-orange-600 transition-colors">博客</h2>
+            <p className="text-xs text-stone-400 mt-1">记录思考、观察与随笔</p>
+          </div>
+          <span className="text-orange-300 group-hover:text-orange-500 group-hover:translate-x-0.5 transition-all text-sm self-end">→</span>
+        </Link>
 
-      {/* 随机格言 */}
-      <RandomQuote quotes={quotes} />
+        {/* GitHub 卡 */}
+        <Link
+          href="/github"
+          className="md:col-span-2 group rounded-3xl bg-white border border-orange-100 p-5 flex flex-col justify-between hover:border-orange-300 hover:shadow-md hover:-translate-y-0.5 transition-all duration-200 min-h-28"
+        >
+          <div>
+            <span className="text-2xl">🛠️</span>
+            <h2 className="font-semibold text-stone-800 mt-2 group-hover:text-orange-600 transition-colors">我在做什么</h2>
+            <p className="text-xs text-stone-400 mt-1">GitHub 贡献与近期项目</p>
+          </div>
+          <span className="text-orange-300 group-hover:text-orange-500 group-hover:translate-x-0.5 transition-all text-sm self-end">→</span>
+        </Link>
+
+        {/* 推荐卡 */}
+        <Link
+          href="/links"
+          className="md:col-span-2 group rounded-3xl bg-gradient-to-br from-amber-50 to-orange-50 border border-orange-100 p-5 flex flex-col justify-between hover:border-orange-300 hover:shadow-md hover:-translate-y-0.5 transition-all duration-200 min-h-28"
+        >
+          <div>
+            <span className="text-2xl">🔖</span>
+            <h2 className="font-semibold text-stone-800 mt-2 group-hover:text-orange-600 transition-colors">我的推荐</h2>
+            <p className="text-xs text-stone-400 mt-1">值得分享的网站与工具</p>
+          </div>
+          <span className="text-orange-300 group-hover:text-orange-500 group-hover:translate-x-0.5 transition-all text-sm self-end">→</span>
+        </Link>
+
+        {/* 格言卡 — 跨 1 列，占满剩余 */}
+        <div className="md:col-span-1 rounded-3xl bg-stone-50 border border-stone-100 p-5 flex items-center justify-center min-h-28">
+          <RandomQuote quotes={quotes} />
+        </div>
+
+        {/* 播客卡 */}
+        <Link
+          href="/podcast"
+          className="md:col-span-2 group rounded-3xl bg-white border border-dashed border-orange-200 p-5 flex flex-col justify-between hover:border-orange-300 hover:-translate-y-0.5 transition-all duration-200 min-h-28 opacity-60 hover:opacity-100"
+        >
+          <div>
+            <span className="text-2xl">🎙️</span>
+            <h2 className="font-semibold text-stone-600 mt-2">播客</h2>
+            <p className="text-xs text-stone-400 mt-1">Coming Soon</p>
+          </div>
+        </Link>
+
+      </div>
     </div>
   );
 }
