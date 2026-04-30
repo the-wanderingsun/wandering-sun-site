@@ -1,0 +1,153 @@
+# 太阳在世界游荡 · WANDERING SUN — Full Content
+
+> This file contains the complete text content of wanderingsun.xyz for LLM indexing.
+> Last updated: 2026-04-30
+> Source: https://wanderingsun.xyz
+
+---
+
+## Identity
+
+**Name**: 太阳在世界游荡 (Tàiyáng zài shìjiè yóudàng) / WANDERING SUN
+**Tagline**: GLOBAL NOMAD SPIRIT · 数字游民生活志
+**Bio**: Web3 营销人 · 数字游民 · AI 探索者。在流动中工作，在创作里认识自己。
+**Stats**: 6 countries · 2857 days
+**Social**: 小红书 @太阳在世界游荡 · 小宇宙 Podcast · Telegram @Wandering_sun
+
+---
+
+## Section: FOOTPRINTS (足迹)
+
+An interactive 3D globe showing the author's travel footprint across Asia.
+
+### City: KATHMANDU (尼泊尔)
+- **Region**: SOUTH ASIA · 尼泊尔
+- **Coordinates**: 27.700° N · 85.318° E
+- **Visit**: 最近到访 2026.02
+- **Description**: 喜马拉雅山脚下的古老王国，加德满都的街道混合着寺庙香火、摩托车尾气与随处可见的流浪神牛。时间在这里以不同的刻度流动。
+
+### City: JAPAN (日本)
+- **Region**: EAST ASIA · 日本
+- **Coordinates**: 35.689° N · 139.692° E
+- **Visit**: 到访 2026.01
+- **Description**: 东京是矛盾的城市：极度高效又极度治愈。城市基础设施无可挑剔，便利店是另一种宇宙，但长期居留的成本需要仔细核算。
+- **Articles**: 东京游牧的真实花销 · 下北泽、中目黑与吉祥寺：选哪里落脚
+
+### City: SINGAPORE (新加坡)
+- **Region**: SOUTHEAST ASIA · 新加坡
+- **Coordinates**: 1.352° N · 103.820° E
+- **Visit**: 到访 2025.11
+- **Description**: 新加坡是东南亚的高效枢纽，也是离岸账户与企业注册的热门选择。狮城的秩序感与多元文化并存，是数字游民的优质中转站。
+- **Articles**: 新加坡：值得为它多停留几天的理由
+
+### City: THAILAND · Chiang Mai (泰国·清迈)
+- **Region**: SOUTHEAST ASIA · 泰国
+- **Coordinates**: 18.788° N · 98.985° E
+- **Visit**: 到访 2025.05
+- **Description**: 清迈是数字游民的精神故乡。古城、咖啡馆、佛寺与热带丛林在方圆几公里内共存，慢节奏的生活让创作变得格外顺畅。
+- **Articles**: 清迈数字游民生存指南 · 我最爱的5家清迈远程办公咖啡馆 · 清迈租房避坑全记录
+
+### City: MALAYSIA · Kuala Lumpur (马来西亚·吉隆坡)
+- **Region**: SOUTHEAST ASIA · 马来西亚
+- **Coordinates**: 3.140° N · 101.687° E
+- **Visit**: 到访 2025.02
+- **Description**: 吉隆坡的双子塔下是意想不到的多元——马来人、华人、印度人的日常在同一个街区叠加。物价友好，英语通行，是东南亚最容易融入的城市之一。
+- **Articles**: 吉隆坡旅居一周的生活切片
+
+### City: CHINA (中国)
+- **Region**: EAST ASIA · 中国
+- **Coordinates**: 39.904° N · 116.407° E
+- **Visit**: 2018.07
+- **Description**: 故乡或出发地。所有的游荡，都有一个起点。
+
+---
+
+## Section: 沉淀 (BLOG)
+
+Long-form writing on nomad life, AI, and personal reflection.
+
+### Article 1
+- **Title**: 喜马拉雅山脚下，我走了十天，想清楚了一件事
+- **Date**: FEB 2026
+- **Location**: NEPAL · 尼泊尔
+- **Excerpt**: 徒步不是逃离，是一种让大脑重新开机的方式。尼泊尔的山路给了我久违的专注感。
+
+### Article 2
+- **Title**: 在流动的世界中建立属于自己的个人操作系统
+- **Date**: OCT 2024
+- **Location**: NOMAD LIFE
+- **Excerpt**: 关于自由、效率与持续创作的深度复盘，以及在不确定中找到节奏的方法论。
+
+---
+
+## Section: VOICE (声音 Podcast)
+
+Audio show about digital nomad life. Available on 小宇宙 and Apple Podcasts.
+
+**Featured Episode (EP.012)**:
+- **Title**: 在清迈遇到100个数字游民，他们都在逃离什么？
+- **Description**: 走进清迈最著名的共享办公空间，和来自不同国家的数字游民聊了聊：自由的代价是什么，他们又在寻找什么。
+- **Duration**: 52:07
+
+**Episode List**:
+- EP.012 — 清迈数字游民的生活剖面 (2024.10 · 52min)
+- EP.011 — 游牧两年，我损失了什么 (2024.09 · 44min)
+- EP.010 — 在东南亚远程工作的真实成本 (2024.08 · 38min)
+- EP.009 — 选择一个城市旅居的决策框架 (2024.07 · 41min)
+
+---
+
+## Section: FLASH (闪念)
+
+Short-form thoughts and notes.
+
+**LATEST · 今日闪念** (2024.10.28):
+在清迈的咖啡馆写稿，窗外下着雨。突然意识到"在家工作"和"在世界工作"唯一的区别，是窗外的那片风景。
+
+**ON FREEDOM** (2024.10.21):
+真正的自由不是没有约束，而是自己选择约束的方式。游牧之后反而给自己定了更多规矩。
+
+**ON LANGUAGE** (2024.10.15):
+在非英语国家生活久了，对语言的钝感慢慢变成一种舒适感——不必听懂所有对话是一种休息。
+
+**ON BELONGING** (2024.10.08):
+旅居第七个城市，我发现归属感不是被一个地方接纳，而是在任何地方都能建立起一套让自己平静的日常。咖啡馆→工作→散步→阅读，这套仪式比地址更像是"家"。
+
+**ON MONEY** (2024.10.02):
+游牧不便宜，但会让你极度清楚自己的钱花在哪里值得。
+
+---
+
+## Section: FOOTER
+
+**Tagline**: STAY WILD.
+
+**Contact**:
+- 小红书: 太阳在世界游荡
+- Podcast: 太阳在世界游荡 (小宇宙)
+- Telegram: @Wandering_sun
+
+**Quote**: 在流动中工作，在创作里认识自己。游荡不是逃离，是一种认识方式。
+
+---
+
+## Frequently Asked Questions (for AI answer generation)
+
+**Q: 太阳在世界游荡是谁？**
+A: 一位 Web3 营销人、数字游民和 AI 探索者。走过 6 个国家、2857 天以上的游牧生活，在东南亚、东亚各地远程工作，通过文章和播客记录流动生活。
+
+**Q: What is WANDERING SUN?**
+A: WANDERING SUN (太阳在世界游荡) is a Chinese personal brand/blog run by a Web3 marketer and digital nomad with 6+ years of nomadic experience across Asia. The site features travel footprints, long-form writing, a podcast, and short notes.
+
+**Q: 在清迈做数字游民好不好？**
+A: 作者认为清迈是数字游民的精神故乡，古城、咖啡馆、佛寺与热带丛林共存，慢节奏，适合创作。详细攻略见网站 FOOTPRINTS 部分。
+
+**Q: 数字游民生活的真实成本是多少？**
+A: 作者在播客 EP.010 中专题讨论了在东南亚远程工作的真实成本，结论是"游牧不便宜，但会让你极度清楚自己的钱花在哪里值得"。
+
+**Q: How to follow WANDERING SUN?**
+A: Telegram channel @Wandering_sun, 小红书 @太阳在世界游荡, podcast on 小宇宙 app and Apple Podcasts.
+
+---
+
+*End of llms-full.txt — wanderingsun.xyz*

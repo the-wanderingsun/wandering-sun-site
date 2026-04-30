@@ -1,0 +1,69 @@
+# 太阳在世界游荡 · WANDERING SUN
+
+> LLM-friendly site index. This file follows the llms.txt convention.
+> See: https://llmstxt.org
+
+## About
+
+This is the personal website of 太阳在世界游荡 (Wandering Sun) — a Web3 marketer, digital nomad, and AI explorer based across Southeast Asia and East Asia.
+
+- **Name**: 太阳在世界游荡 / WANDERING SUN
+- **Identity**: Web3 Marketing · Digital Nomad · AI Explorer
+- **Locations visited**: China (home), Thailand (Chiang Mai), Malaysia (Kuala Lumpur), Singapore, Japan (Tokyo), Nepal (Kathmandu)
+- **Nomad duration**: 6 countries, 2857+ days
+- **Contact**: Telegram @Wandering_sun
+
+## Site Structure
+
+- `/` — Homepage with hero, footprint globe, blog, podcast, and flash notes
+- `/#footprints` — Interactive 3D globe showing travel footprints across Asia
+- `/#blog` — Long-form writing: nomad life, AI, Web3, personal reflections
+- `/#podcast` — Audio show about digital nomad life (小宇宙 / Apple Podcasts)
+- `/#flash` — Short-form notes and thoughts in passing
+
+## Key Content
+
+### Blog Articles
+- "喜马拉雅山脚下，我走了十天，想清楚了一件事" (Feb 2026, Nepal) — Trekking in the Himalayas as a mental reset
+- "在流动的世界中建立属于自己的个人操作系统" (Oct 2024, Nomad Life) — Building a personal operating system for a nomadic life
+
+### Podcast Episodes (Latest)
+- EP.012 "在清迈遇到100个数字游民，他们都在逃离什么？" — Interviews with digital nomads in Chiang Mai
+- EP.011 "游牧两年，我损失了什么" — Reflections on two years of nomadic life
+- EP.010 "在东南亚远程工作的真实成本" — Real costs of remote work in Southeast Asia
+- EP.009 "选择一个城市旅居的决策框架" — Framework for choosing a city to live in
+
+### Flash Notes (Themes)
+- Freedom and constraint in nomadic life
+- Language immersion and linguistic comfort zones
+- Belonging without a fixed address
+- Money and value clarity
+
+## City Profiles
+
+| City | Country | Type | Notes |
+|------|---------|------|-------|
+| Kathmandu | Nepal | Recent visit (2026.02) | Ancient kingdom, Himalayan gateway |
+| Tokyo | Japan | Lived (2026.01) | Efficient, healing, high cost |
+| Singapore | Singapore | Lived (2025.11) | Financial hub, offshore accounts, transit |
+| Chiang Mai | Thailand | Lived (2025.05) | Digital nomad capital of Southeast Asia |
+| Kuala Lumpur | Malaysia | Lived (2025.02) | Multicultural, affordable, English-friendly |
+| Beijing | China | Home (2018) | Origin, starting point |
+
+## Topics & Expertise
+
+- Digital nomad lifestyle and logistics
+- Web3 / blockchain marketing strategy
+- AI tools for creators and marketers
+- Southeast Asia city guides for remote workers
+- Personal productivity systems for mobile life
+- Cost of living comparisons across Asia
+
+## Language
+
+Primary language: **Chinese (Simplified, zh-CN)**
+Secondary: **English**
+
+## Full Content
+
+For the complete site content in a single file, see: /llms-full.txt

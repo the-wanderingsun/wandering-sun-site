@@ -1,0 +1,30 @@
+{
+  "name": "太阳在世界游荡 · WANDERING SUN",
+  "short_name": "WANDERING SUN",
+  "description": "Web3 营销人 · 数字游民 · AI 探索者。在流动中工作，在创作里认识自己。",
+  "start_url": "/",
+  "display": "standalone",
+  "background_color": "#050505",
+  "theme_color": "#050505",
+  "lang": "zh-CN",
+  "dir": "ltr",
+  "orientation": "portrait-primary",
+  "scope": "/",
+  "categories": ["lifestyle", "travel", "technology"],
+  "icons": [
+    {
+      "src": "/icon.svg",
+      "sizes": "any",
+      "type": "image/svg+xml",
+      "purpose": "any maskable"
+    }
+  ],
+  "screenshots": [
+    {
+      "src": "/og-image.png",
+      "sizes": "1200x630",
+      "type": "image/png",
+      "label": "WANDERING SUN Homepage"
+    }
+  ]
+}

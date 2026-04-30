@@ -1,0 +1,16 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512">
+  <rect width="512" height="512" rx="114" fill="#fff7ed"/>
+  <g transform="translate(256,256)" fill="#f97316">
+    <!-- 8 rays at 45° intervals -->
+    <rect x="-11" y="-200" width="22" height="76" rx="11"/>
+    <rect x="-11" y="-200" width="22" height="76" rx="11" transform="rotate(45)"/>
+    <rect x="-11" y="-200" width="22" height="76" rx="11" transform="rotate(90)"/>
+    <rect x="-11" y="-200" width="22" height="76" rx="11" transform="rotate(135)"/>
+    <rect x="-11" y="-200" width="22" height="76" rx="11" transform="rotate(180)"/>
+    <rect x="-11" y="-200" width="22" height="76" rx="11" transform="rotate(225)"/>
+    <rect x="-11" y="-200" width="22" height="76" rx="11" transform="rotate(270)"/>
+    <rect x="-11" y="-200" width="22" height="76" rx="11" transform="rotate(315)"/>
+    <!-- Sun core -->
+    <circle r="90"/>
+  </g>
+</svg>
