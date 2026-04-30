@@ -16,13 +16,13 @@ interface Props {
 }
 
 const colorMap: Record<string, string> = {
-  current: '#00eeff',
-  lived: '#4488ff',
-  visited: '#334466',
+  current: '#ff5e14',  // 亮橙 — 与网站 --accent 一致
+  lived:   '#f5a623',  // 琥珀橙 — 旅居过的城市
+  visited: '#7a3a10',  // 深棕橙 — 路过
 }
 const sizeMap: Record<string, number> = {
   current: 0.55,
-  lived: 0.38,
+  lived:   0.38,
   visited: 0.25,
 }
 
@@ -114,17 +114,17 @@ export default function GlobeClient({ cities, onCitySelect }: Props) {
           .pointResolution(16)
           .pointLabel((d: City) =>
             `<div style="font-family:monospace;font-size:12px;
-              background:rgba(5,15,35,0.85);border:1px solid rgba(0,200,255,0.5);
-              border-radius:6px;padding:6px 10px;color:#a0d8ef;line-height:1.5;">
-              <strong style="color:#00eeff">${d.name}</strong><br>
+              background:rgba(20,10,5,0.88);border:1px solid rgba(255,94,20,0.5);
+              border-radius:6px;padding:6px 10px;color:#f5c8a0;line-height:1.5;">
+              <strong style="color:#ff5e14">${d.name}</strong><br>
               <span style="opacity:0.75">${d.region}</span>
             </div>`)
           .onPointClick((d: City) => {
             onCitySelect(d)
             globe.pointOfView({ lat: d.lat, lng: d.lon, altitude: 1.8 }, 800)
           })
-          .atmosphereColor('#1a6fff')
-          .atmosphereAltitude(0.18)
+          .atmosphereColor('#ff7030')
+          .atmosphereAltitude(0.15)
 
         globeInstance = globe
 
@@ -153,12 +153,18 @@ export default function GlobeClient({ cities, onCitySelect }: Props) {
             fragmentShader: dayNightFragmentShader,
           })
 
-          globe
-            .globeMaterial(dayNightMaterial)
-            .onZoom(({ lng, lat }: { lng: number; lat: number }) => {
-              if (dayNightMaterial) dayNightMaterial.uniforms.globeRotation.value.set(lng, lat)
-            })
+          globe.globeMaterial(dayNightMaterial)
 
+          // 每帧同步地球旋转角度到 shader（自动旋转 + 用户拖拽都覆盖）
+          // onZoom 只在用户缩放/平移时触发，无法追踪 autoRotate，改用 controls.change
+          const onControlsChange = () => {
+            if (!dayNightMaterial) return
+            const pov = globe.pointOfView() as { lat: number; lng: number; altitude: number }
+            dayNightMaterial.uniforms.globeRotation.value.set(pov.lng, pov.lat)
+          }
+          globe.controls().addEventListener('change', onControlsChange)
+
+          // 实时更新太阳位置（每秒），确保黑夜/白天随真实时间变化
           function animateSun() {
             if (dayNightMaterial) {
               const [sLng, sLat] = sunPosition(new Date())

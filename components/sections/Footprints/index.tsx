@@ -20,15 +20,15 @@ export default function Footprints() {
           <GlobeClient cities={CITIES} onCitySelect={setActiveCity} />
           <div className="globe-legend fp-legend">
             <div className="legend-item">
-              <div className="legend-dot" style={{ background: '#00eeff', boxShadow: '0 0 6px #00eeff' }} />
+              <div className="legend-dot" style={{ background: '#ff5e14', boxShadow: '0 0 6px #ff5e14' }} />
               当前
             </div>
             <div className="legend-item">
-              <div className="legend-dot" style={{ background: '#4488ff', boxShadow: '0 0 5px #4488ff' }} />
+              <div className="legend-dot" style={{ background: '#f5a623', boxShadow: '0 0 5px #f5a623' }} />
               旅居
             </div>
             <div className="legend-item">
-              <div className="legend-dot" style={{ background: '#334466' }} />
+              <div className="legend-dot" style={{ background: '#7a3a10' }} />
               路过
             </div>
           </div>
