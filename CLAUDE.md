@@ -190,3 +190,4 @@ TELEGRAM_URL    = 'https://t.me/Wandering_sun'
 | 2026-04-30 | SEO/GEO/LLM：完整 metadata + robots.ts + sitemap.ts + JsonLd + llms.txt |
 | 2026-04-30 | 安装 pua@pua-skills plugin |
 | 2026-04-30 | 修复 hydration mismatch：Player.tsx Math.random() 改为 useEffect 延迟初始化，layout.tsx html/body 加 suppressHydrationWarning |
+| 2026-04-30 | 修复 sunPosition() 180° 错误：`(180 - H_)` → `(360 - H_)`，修复中国夜晚显示为白天的 bug；补加 globeRotation 首帧初始化 |

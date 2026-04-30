@@ -39,7 +39,7 @@ function sunPosition(date: Date): [number, number] {
   const GMST = (6.697375 + 0.0657098242 * n) % 24
   const utcH = date.getUTCHours() + date.getUTCMinutes() / 60 + date.getUTCSeconds() / 3600
   const H_ = ((GMST + utcH) * 15 - (RA * 180) / Math.PI + 360) % 360
-  let lng = (180 - H_ + 360) % 360
+  let lng = (360 - H_) % 360
   if (lng > 180) lng -= 360
   return [lng, dec]
 }
@@ -154,6 +154,10 @@ export default function GlobeClient({ cities, onCitySelect }: Props) {
           })
 
           globe.globeMaterial(dayNightMaterial)
+
+          // 初始化 globeRotation（避免 shader 首帧使用默认 (0,0)）
+          const initPov = globe.pointOfView() as { lat: number; lng: number; altitude: number }
+          dayNightMaterial.uniforms.globeRotation.value.set(initPov.lng, initPov.lat)
 
           // 每帧同步地球旋转角度到 shader（自动旋转 + 用户拖拽都覆盖）
           // onZoom 只在用户缩放/平移时触发，无法追踪 autoRotate，改用 controls.change
