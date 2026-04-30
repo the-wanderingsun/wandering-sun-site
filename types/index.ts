@@ -25,6 +25,7 @@ export interface Post {
   title: string
   excerpt: string
   href: string
+  content?: string   // Markdown 正文（可选，有值时启用全文页）
 }
 
 export interface Episode {

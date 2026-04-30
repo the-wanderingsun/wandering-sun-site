@@ -191,3 +191,4 @@ TELEGRAM_URL    = 'https://t.me/Wandering_sun'
 | 2026-04-30 | 安装 pua@pua-skills plugin |
 | 2026-04-30 | 修复 hydration mismatch：Player.tsx Math.random() 改为 useEffect 延迟初始化，layout.tsx html/body 加 suppressHydrationWarning |
 | 2026-04-30 | 修复 sunPosition() 180° 错误：`(180 - H_)` → `(360 - H_)`，修复中国夜晚显示为白天的 bug；补加 globeRotation 首帧初始化 |
+| 2026-04-30 | 新增博客文章页：`app/blog/[id]/page.tsx` 动态路由，极简 Markdown 渲染，SSG 静态生成；首篇《在流动的世界中建立属于自己的个人操作系统》已上线 `/blog/nomad-os` |
