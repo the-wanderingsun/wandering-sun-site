@@ -10,6 +10,7 @@ export const POSTS: Post[] = [
     title: '喜马拉雅山脚下，我走了十天，想清楚了一件事',
     excerpt: '徒步不是逃离，是一种让大脑重新开机的方式。尼泊尔的山路给了我久违的专注感。',
     href: '#',
+    category: '旅居',
   },
   {
     id: 'nomad-os',
@@ -20,6 +21,7 @@ export const POSTS: Post[] = [
     title: '在流动的世界中建立属于自己的个人操作系统',
     excerpt: '关于自由、效率与持续创作的深度复盘，以及在不确定中找到节奏的方法论。',
     href: '/blog/nomad-os',
+    category: '思考',
     content: `---
 
 去年夏天，我和家人坐在曼谷街头的蹦蹦车上，顶着烈日，辗转于一座座寺庙之间。

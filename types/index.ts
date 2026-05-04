@@ -16,6 +16,8 @@ export interface CityArticle {
   tag: string
 }
 
+export type PostCategory = '旅居' | 'Web3' | 'AI' | '思考'
+
 export interface Post {
   id: string
   date: string
@@ -25,6 +27,7 @@ export interface Post {
   title: string
   excerpt: string
   href: string
+  category?: PostCategory
   content?: string   // Markdown 正文（可选，有值时启用全文页）
 }
 
