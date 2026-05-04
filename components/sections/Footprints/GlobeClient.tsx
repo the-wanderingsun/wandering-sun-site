@@ -13,6 +13,7 @@ declare global {
 interface Props {
   cities: City[]
   onCitySelect: (city: City) => void
+  activeCity: City
 }
 
 const colorMap: Record<string, string> = {
@@ -79,8 +80,10 @@ const dayNightFragmentShader = `
     gl_FragColor = mix(nightColor, dayColor, smoothstep(-0.1, 0.1, intensity));
   }`
 
-export default function GlobeClient({ cities, onCitySelect }: Props) {
+export default function GlobeClient({ cities, onCitySelect, activeCity }: Props) {
   const wrapRef = useRef<HTMLDivElement>(null)
+  // eslint-disable-next-line @typescript-eslint/no-explicit-any
+  const globeRef = useRef<any>(null)
 
   useEffect(() => {
     if (!wrapRef.current) return
@@ -127,6 +130,7 @@ export default function GlobeClient({ cities, onCitySelect }: Props) {
           .atmosphereAltitude(0.15)
 
         globeInstance = globe
+        globeRef.current = globe
 
         const controls = globe.controls()
         controls.autoRotate = true
@@ -202,6 +206,15 @@ export default function GlobeClient({ cities, onCitySelect }: Props) {
       window.updateGlobeTheme = undefined
     }
   }, [cities, onCitySelect])
+
+  // 底部导航条 / 外部切换城市时，平滑旋转地球到对应位置
+  useEffect(() => {
+    if (!globeRef.current) return
+    globeRef.current.pointOfView(
+      { lat: activeCity.lat, lng: activeCity.lon, altitude: 1.8 },
+      900,  // ms，easeInOut 缓动
+    )
+  }, [activeCity])
 
   return <div ref={wrapRef} id="globe-canvas-wrap" />
 }
