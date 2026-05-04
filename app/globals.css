@@ -359,6 +359,7 @@ nav {
   transition: color 0.2s, border-color 0.4s;
 }
 .city-article-link:hover { color: var(--accent-blue); }
+.city-article-soon { opacity: 0.45; cursor: default; pointer-events: none; }
 .city-article-link svg { flex-shrink: 0; opacity: 0.35; }
 .city-tag {
   display: inline-block; padding: 3px 10px; border-radius: 100px;

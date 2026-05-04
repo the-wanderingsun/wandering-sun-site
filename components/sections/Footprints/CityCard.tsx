@@ -31,16 +31,28 @@ export default function CityCard({ city }: Props) {
               </div>
             ) : (
               city.articles.map((article, i) => (
-                <a key={i} href="#" className="city-article-link">
-                  <span>{article.title}</span>
-                  <div style={{ display: 'flex', alignItems: 'center', gap: '8px', flexShrink: 0 }}>
-                    <span className="city-tag">{article.tag}</span>
-                    <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
-                      <line x1="5" y1="12" x2="19" y2="12" />
-                      <polyline points="12 5 19 12 12 19" />
-                    </svg>
+                article.href ? (
+                  /* 有链接：可跳转 */
+                  <a key={i} href={article.href} className="city-article-link">
+                    <span>{article.title}</span>
+                    <div style={{ display: 'flex', alignItems: 'center', gap: '8px', flexShrink: 0 }}>
+                      <span className="city-tag">{article.tag}</span>
+                      <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
+                        <line x1="5" y1="12" x2="19" y2="12" />
+                        <polyline points="12 5 19 12 12 19" />
+                      </svg>
+                    </div>
+                  </a>
+                ) : (
+                  /* 无链接：置灰 + "即将发布" */
+                  <div key={i} className="city-article-link city-article-soon">
+                    <span>{article.title}</span>
+                    <div style={{ display: 'flex', alignItems: 'center', gap: '8px', flexShrink: 0 }}>
+                      <span className="city-tag">{article.tag}</span>
+                      <span style={{ fontSize: '10px', color: 'var(--fg-muted)', letterSpacing: '.06em' }}>即将</span>
+                    </div>
                   </div>
-                </a>
+                )
               ))
             )}
           </div>
