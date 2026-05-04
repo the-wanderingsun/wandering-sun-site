@@ -2,7 +2,7 @@
 title: '喜马拉雅山脚下，我走了6天，想清楚了一件事'
 slug: 'nepal-trek'
 publishedAt: '2026-02-16'
-category: '旅居'
+category: 'LIVING'
 location: 'NEPAL · 尼泊尔'
 excerpt: '徒步不是逃离，是一种让大脑重新开机的方式。尼泊尔的山路给了我久违的专注感。'
 image: '/images/hiking.png'

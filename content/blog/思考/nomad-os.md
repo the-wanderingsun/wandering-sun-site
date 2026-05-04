@@ -2,7 +2,7 @@
 title: '在流动的世界中建立属于自己的个人操作系统'
 slug: 'nomad-os'
 publishedAt: '2026-04-30'
-category: '思考'
+category: 'ESSAYS'
 location: 'NOMAD LIFE'
 excerpt: '关于自由、效率与持续创作的深度复盘，以及在不确定中找到节奏的方法论。'
 image: '/images/working.png'

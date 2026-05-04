@@ -17,7 +17,7 @@ export interface CityArticle {
   href?: string   // 有值时可跳转，无值时显示"即将发布"
 }
 
-export type PostCategory = '旅居' | 'Web3' | 'AI' | '思考'
+export type PostCategory = 'LIVING' | 'WEB3' | 'AI' | 'ESSAYS'
 
 export interface Post {
   id: string

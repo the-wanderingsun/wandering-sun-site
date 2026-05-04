@@ -4,17 +4,17 @@ import { useState } from 'react'
 import Image from 'next/image'
 import type { Post, PostCategory } from '@/types'
 
-const TABS: Array<'全部' | PostCategory> = ['全部', '旅居', 'Web3', 'AI', '思考']
+const TABS: Array<'ALL' | PostCategory> = ['ALL', 'LIVING', 'WEB3', 'AI', 'ESSAYS']
 
 interface Props {
   posts: Post[]
 }
 
 export default function Blog({ posts }: Props) {
-  const [active, setActive] = useState<'全部' | PostCategory>('全部')
+  const [active, setActive] = useState<'ALL' | PostCategory>('ALL')
 
   const filtered =
-    active === '全部' ? posts : posts.filter((p) => p.category === active)
+    active === 'ALL' ? posts : posts.filter((p) => p.category === active)
 
   return (
     <section id="blog" className="section-border">
@@ -32,7 +32,7 @@ export default function Blog({ posts }: Props) {
             onClick={() => setActive(tab)}
           >
             {tab}
-            {tab !== '全部' && (
+            {tab !== 'ALL' && (
               <span className="blog-tab-count">
                 {posts.filter((p) => p.category === tab).length}
               </span>
