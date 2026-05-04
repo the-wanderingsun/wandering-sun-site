@@ -4,7 +4,7 @@ const post: Post = {
   id: 'nepal-kathmandu',
   date: 'FEB 2026',
   location: 'KATHMANDU · 尼泊尔',
-  image: '/images/hiking.png',
+  image: '/images/kathmandu.png',
   imageAlt: '加德满都街头',
   title: '落地即穿越：在尼泊尔加德满都的真实经历',
   excerpt: '从机场打车的那一刻起，我就知道这不是一趟普通的旅行。90年代中国城中村、F1赛车司机、烧尸庙……加德满都两天，文化冲击全程在线。',

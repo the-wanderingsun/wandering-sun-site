@@ -6,9 +6,9 @@ const post: Post = {
   location: 'NEPAL · 尼泊尔',
   image: '/images/hiking.png',
   imageAlt: '尼泊尔徒步',
-  title: '喜马拉雅山脚下，我走了5天，想清楚了一件事',
+  title: '喜马拉雅山脚下，我走了6天，想清楚了一件事',
   excerpt: '徒步不是逃离，是一种让大脑重新开机的方式。尼泊尔的山路给了我久违的专注感。',
-  href: '#',
+  href: '/blog/nepal-trek',
   category: '旅居',
 content: `# 6天走完布恩山+MHBC复盘｜这些装备白背了+路线优化
 
