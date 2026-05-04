@@ -30,11 +30,11 @@ export default function Hero() {
         <div className="hero-meta">
           <div className="hero-meta-item">
             <span className="hero-meta-label">小红书</span>
-            <a className="hero-meta-value" href="#">太阳在世界游荡</a>
+            <a className="hero-meta-value" href="https://www.xiaohongshu.com/user/profile/6347e7140000000018028cab" target="_blank" rel="noopener noreferrer">太阳在世界游荡</a>
           </div>
           <div className="hero-meta-item">
             <span className="hero-meta-label">PODCAST</span>
-            <a className="hero-meta-value" href="#">小宇宙</a>
+            <a className="hero-meta-value" href="https://www.xiaoyuzhoufm.com/podcast/69f2139e0e78214ab607ed4c" target="_blank" rel="noopener noreferrer">小宇宙</a>
           </div>
         </div>
       </div>

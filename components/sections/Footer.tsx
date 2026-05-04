@@ -8,11 +8,11 @@ export default function Footer() {
         <div className="footer-contacts">
           <div className="footer-contact-item">
             <span className="footer-contact-label">小红书</span>
-            <a href="#" className="footer-contact-value">太阳在世界游荡</a>
+            <a href="https://www.xiaohongshu.com/user/profile/6347e7140000000018028cab" target="_blank" rel="noopener noreferrer" className="footer-contact-value">太阳在世界游荡</a>
           </div>
           <div className="footer-contact-item">
             <span className="footer-contact-label">PODCAST</span>
-            <a href="#" className="footer-contact-value">太阳在世界游荡</a>
+            <a href="https://www.xiaoyuzhoufm.com/podcast/69f2139e0e78214ab607ed4c" target="_blank" rel="noopener noreferrer" className="footer-contact-value">太阳在世界游荡</a>
           </div>
           <div className="footer-contact-item">
             <span className="footer-contact-label">TELEGRAM</span>
