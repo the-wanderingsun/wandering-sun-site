@@ -6,16 +6,21 @@
     "dev": "next dev --turbopack",
     "build": "next build --turbopack",
     "start": "next start",
-    "lint": "next lint"
+    "lint": "next lint",
+    "new:post": "node scripts/new-post.mjs"
   },
   "dependencies": {
+    "globe.gl": "^2.30.0",
+    "gray-matter": "^4.0.3",
     "next": "^16.2.4",
     "react": "^19.0.0",
     "react-dom": "^19.0.0",
-    "globe.gl": "^2.30.0",
+    "remark": "^15.0.1",
+    "remark-html": "^16.0.1",
     "three": "^0.184.0"
   },
   "devDependencies": {
+    "@types/mdast": "^4.0.4",
     "@types/node": "^22.0.0",
     "@types/react": "^19.0.0",
     "@types/react-dom": "^19.0.0",

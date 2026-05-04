@@ -1,16 +1,15 @@
-import type { Post } from '@/types'
+---
+title: '落地即穿越：在尼泊尔加德满都的真实经历'
+slug: 'nepal-kathmandu'
+publishedAt: '2026-02-11'
+category: '旅居'
+location: 'KATHMANDU · 尼泊尔'
+excerpt: '从机场打车的那一刻起，我就知道这不是一趟普通的旅行。90年代中国城中村、F1赛车司机、烧尸庙……加德满都两天，文化冲击全程在线。'
+image: '/images/kathmandu.png'
+imageAlt: '加德满都街头'
+---
 
-const post: Post = {
-  id: 'nepal-kathmandu',
-  date: 'FEB 2026',
-  location: 'KATHMANDU · 尼泊尔',
-  image: '/images/kathmandu.png',
-  imageAlt: '加德满都街头',
-  title: '落地即穿越：在尼泊尔加德满都的真实经历',
-  excerpt: '从机场打车的那一刻起，我就知道这不是一趟普通的旅行。90年代中国城中村、F1赛车司机、烧尸庙……加德满都两天，文化冲击全程在线。',
-  href: '/blog/nepal-kathmandu',
-  category: '旅居',
-  content: `## 01. 为什么是尼泊尔？
+## 01. 为什么是尼泊尔？
 
 放着好好的昆明不待，为什么要跑来这么一个穷地方旅居？理由很简单：这里有划算到离谱的兴趣班，世界级的徒步风景，还正值旱季，温度和空气应该（我原本以为）很适宜。最重要的是——便宜！带着这种性价比之选的心理，我出发了。
 
@@ -68,7 +67,4 @@ const post: Post = {
 
 ---
 
-*写于 2026 年 2 月 11 日*`,
-}
-
-export default post
+*写于 2026 年 2 月 11 日*

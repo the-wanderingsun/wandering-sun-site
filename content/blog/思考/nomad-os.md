@@ -1,16 +1,13 @@
-import type { Post } from '@/types'
-
-const post: Post = {
-  id: 'nomad-os',
-  date: 'APR 2026',
-  location: 'NOMAD LIFE',
-  image: '/images/working.png',
-  imageAlt: '工作日常',
-  title: '在流动的世界中建立属于自己的个人操作系统',
-  excerpt: '关于自由、效率与持续创作的深度复盘，以及在不确定中找到节奏的方法论。',
-  href: '/blog/nomad-os',
-  category: '思考',
-  content: `---
+---
+title: '在流动的世界中建立属于自己的个人操作系统'
+slug: 'nomad-os'
+publishedAt: '2026-04-30'
+category: '思考'
+location: 'NOMAD LIFE'
+excerpt: '关于自由、效率与持续创作的深度复盘，以及在不确定中找到节奏的方法论。'
+image: '/images/working.png'
+imageAlt: '工作日常'
+---
 
 去年夏天，我和家人坐在曼谷街头的蹦蹦车上，顶着烈日，辗转于一座座寺庙之间。
 
@@ -112,7 +109,4 @@ const post: Post = {
 
 ---
 
-*写于 2026 年 4 月 30 日*`,
-}
-
-export default post
+*写于 2026 年 4 月 30 日*
