@@ -2,13 +2,28 @@ import type { City } from '@/types'
 
 export const CITIES: City[] = [
   {
+    id: 'kuala-lumpur',
+    name: 'KUALA LUMPUR',
+    region: 'SOUTHEAST ASIA · 马来西亚',
+    lat: 3.14,
+    lon: 101.69,
+    type: 'current',
+    statusText: '当前所在 2026.05',
+    coords: '3.140° N · 101.687° E',
+    desc: '刚落地，还在适应这座城市的节奏。热带的湿气、多元的面孔、意外好吃的街边食物——马来西亚的第一印象，比想象中复杂，也比想象中有趣。',
+    articles: [
+      { title: '落地马来西亚：第一周的真实感受', tag: '旅居', href: '/blog/malaysia-landing' },
+      { title: '在马来西亚语言学校试课：值得吗？', tag: '游学', href: '/blog/malaysia-language-school' },
+    ],
+  },
+  {
     id: 'kunming',
     name: 'KUNMING',
     region: 'SOUTHWEST CHINA · 云南昆明',
     lat: 24.87,
     lon: 102.90,
-    type: 'current',
-    statusText: '当前所在 2026.05',
+    type: 'lived',
+    statusText: '旅居 2025.07～2026.04',
     coords: '24.874° N · 102.906° E',
     desc: '从安宁区到呈贡区，在昆明断断续续住了快一年。安宁很偏，进城一趟算出远门，但有每周两次的集市，便宜新鲜的蔬果和朴实的云南人，撑起了一段原本有些无聊的旅居生活。',
     articles: [],
