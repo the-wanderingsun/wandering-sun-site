@@ -5,8 +5,8 @@ publishedAt: '2026-05-10'
 category: 'LIVING'
 location: 'LIVING · MALAYSIA'
 excerpt: '比想象中凉快，比想象中想搞钱——落地三天，我的真实观察和踩坑记录。'
-image: '/images/kuala-lumpur.JPG'
-imageAlt: '吉隆坡街头欧式建筑'
+image: '/images/cover-living.png'
+imageAlt: '吉隆坡落地记'
 ---
 
 ![吉隆坡街头欧式建筑](/images/kuala-lumpur.JPG)
