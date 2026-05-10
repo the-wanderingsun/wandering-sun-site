@@ -5,7 +5,7 @@ publishedAt: '2026-04-30'
 category: 'ESSAYS'
 location: 'NOMAD LIFE'
 excerpt: '关于自由、效率与持续创作的深度复盘，以及在不确定中找到节奏的方法论。'
-image: '/images/working.png'
+image: '/images/nomad-os-cover.png'
 imageAlt: '工作日常'
 ---
 
