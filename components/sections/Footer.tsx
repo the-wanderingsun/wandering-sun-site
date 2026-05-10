@@ -16,7 +16,7 @@ export default function Footer() {
           </div>
           <div className="footer-contact-item">
             <span className="footer-contact-label">TELEGRAM</span>
-            <a href="https://t.me/Wandering_sun" className="footer-contact-value">@Wandering_sun</a>
+            <a href="https://t.me/Wanderingsun_xyz" className="footer-contact-value">@Wanderingsun_xyz</a>
           </div>
         </div>
       </div>
