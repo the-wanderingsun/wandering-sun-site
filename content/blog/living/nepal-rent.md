@@ -5,7 +5,7 @@ publishedAt: '2026-05-04'
 category: 'LIVING'
 location: 'POKHARA · 尼泊尔'
 excerpt: '尼泊尔4000人民币4的房子长什么样'
-image: '/images/POKHARA-Rent.jpg'
+image: '/images/nepal-rent-cover.jpg'
 imageAlt: '骑行在博卡拉街头的旅人'
 ---
 
