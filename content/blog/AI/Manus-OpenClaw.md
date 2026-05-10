@@ -5,7 +5,7 @@ publishedAt: '2026-05-04'
 category: 'AI'
 location: 'AI · 观察'
 excerpt: '从Manus到小龙虾，每一次刷屏背后都是同一套剧本。AI行业正在用造神-毁灭-再造神的方式消耗我们的注意力。'
-image: '/images/Manus-OpenClaw.jpg'
+image: '/images/ai-hype-playbook-cover.jpg'
 imageAlt: 'AI工具'
 ---
 

@@ -5,7 +5,7 @@ publishedAt: '2026-05-04'
 category: 'WEB3'
 location: 'WEB3 · 思考'
 excerpt: ' Web3 现在最大的叙事是什么？'
-image: '/images/working.jpg'
+image: '/images/decentralized-gpt-cover.jpg'
 imageAlt: '数字游民的日常'
 ---
 
