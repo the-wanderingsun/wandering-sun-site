@@ -9,7 +9,7 @@ image: '/images/cover-living.png'
 imageAlt: '吉隆坡落地记'
 ---
 
-![吉隆坡街头欧式建筑](/images/kuala-lumpur.JPG)
+![吉隆坡街头欧式建筑](/images/kuala-lumpur.jpg)
 
 其实这是我第二次来马来西亚。
 
