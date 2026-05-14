@@ -92,7 +92,7 @@ export function getAllPosts(): Post[] {
         id: fm.slug,
         date: formatDate(fm.publishedAt),
         location: fm.location ?? '',
-        image: fm.image ?? '/images/hiking.png',
+        image: fm.image ?? '/images/nepal-trek-cover.png',
         imageAlt: fm.imageAlt ?? '',
         title: fm.title,
         excerpt: fm.excerpt ?? '',
