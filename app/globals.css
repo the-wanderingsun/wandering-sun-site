@@ -992,3 +992,135 @@ footer {
   .bp-header { padding: 28px 20px 8px; }
   .bp-body { padding: 36px 20px 80px; font-size: 15px; }
 }
+
+/* ─── Roadtrip 路线图页面 ─── */
+.rt-page {
+  min-height: 100vh;
+  background: var(--bg);
+  display: flex;
+  flex-direction: column;
+}
+.rt-header {
+  padding: 20px 24px 12px;
+  border-bottom: 1px solid var(--border);
+  display: flex;
+  align-items: center;
+  gap: 20px;
+  flex-wrap: wrap;
+}
+.rt-back {
+  font-size: 13px;
+  color: var(--fg-muted);
+  text-decoration: none;
+  white-space: nowrap;
+}
+.rt-back:hover { color: var(--accent); }
+.rt-title {
+  font-family: 'Noto Sans SC', sans-serif;
+  font-size: 18px;
+  font-weight: 700;
+  color: var(--fg);
+  margin: 0;
+}
+.rt-subtitle {
+  font-size: 12px;
+  color: var(--fg-muted);
+  margin: 2px 0 0;
+}
+.rt-stats {
+  display: flex;
+  gap: 12px;
+  margin-left: auto;
+  font-size: 12px;
+  color: var(--fg-dim);
+}
+.rt-legend {
+  display: flex;
+  gap: 16px;
+  padding: 8px 24px;
+  border-bottom: 1px solid var(--border);
+  flex-wrap: wrap;
+}
+.rt-legend-item {
+  display: flex;
+  align-items: center;
+  gap: 5px;
+  font-size: 12px;
+  color: var(--fg-muted);
+}
+.rt-legend-dot {
+  width: 9px;
+  height: 9px;
+  border-radius: 50%;
+  flex-shrink: 0;
+}
+.rt-body {
+  display: flex;
+  flex: 1;
+  min-height: 0;
+  height: calc(100vh - 120px);
+}
+.rt-map {
+  flex: 1;
+  min-width: 0;
+  position: relative;
+}
+.rt-sidebar {
+  width: 300px;
+  flex-shrink: 0;
+  border-left: 1px solid var(--border);
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
+}
+.rt-detail {
+  padding: 16px;
+  border-bottom: 1px solid var(--border);
+  border-left: 3px solid var(--accent);
+  background: var(--card);
+  flex-shrink: 0;
+}
+.rt-detail-date { font-size: 11px; color: var(--fg-muted); margin-bottom: 4px; }
+.rt-detail-city { font-size: 16px; font-weight: 700; color: var(--fg); margin-bottom: 4px; }
+.rt-detail-transport {
+  font-size: 11px;
+  color: var(--fg-muted);
+  background: var(--bg);
+  border-radius: 4px;
+  padding: 3px 7px;
+  margin-bottom: 10px;
+  display: inline-block;
+}
+.rt-detail-landmarks { display: flex; flex-direction: column; gap: 7px; }
+.rt-landmark { display: flex; gap: 8px; align-items: flex-start; }
+.rt-landmark-icon { font-size: 14px; flex-shrink: 0; margin-top: 1px; }
+.rt-landmark-name { font-size: 13px; font-weight: 600; color: var(--fg); }
+.rt-landmark-desc { font-size: 11px; color: var(--fg-muted); line-height: 1.4; }
+.rt-daylist {
+  flex: 1;
+  overflow-y: auto;
+  padding: 8px 0;
+}
+.rt-day-btn {
+  width: 100%;
+  text-align: left;
+  padding: 9px 16px;
+  border: none;
+  border-left: 3px solid transparent;
+  background: transparent;
+  cursor: pointer;
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+  transition: background 0.15s;
+}
+.rt-day-btn:hover { background: var(--card); }
+.rt-day-btn.active { font-weight: 600; }
+.rt-day-date { font-size: 11px; color: var(--fg-muted); }
+.rt-day-city { font-size: 13px; color: var(--fg); }
+@media (max-width: 768px) {
+  .rt-body { flex-direction: column; height: auto; }
+  .rt-map { height: 55vw; min-height: 280px; }
+  .rt-sidebar { width: 100%; height: 340px; border-left: none; border-top: 1px solid var(--border); }
+  .rt-stats { display: none; }
+}
